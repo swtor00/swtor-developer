@@ -1,7 +1,9 @@
 #!/usr/bin/bash
 
-tar cvzf personal-files.tar.gz ../personal-files
-gpg -c personal-files.tar.gz
+final_destination_name="personal-files-$(date '+%Y-%m-%d-%H-%M').tar.gz"
+
+tar cvzf $final_destination_name ../personal-files
+gpg -c $final_destination_name
 
 
 
